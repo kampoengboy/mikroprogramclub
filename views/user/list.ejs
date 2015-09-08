@@ -1,0 +1,17 @@
+<div class="container" style="margin-top:50px;">
+	<h3>List Peserta</h3>
+  <div class="table-responsive">
+	  <table class="table table-bordered table-hover table-striped">
+		<tr>
+			<th>Nama</th>
+			<th>NIM</th>
+		</tr>
+		<% _.each(users, function(user) { %>
+		<tr data-id="<%= user.id %>" data-model="user">
+			<td><%= user.nama %></td>
+			<td> <%= user.nim %> </td>
+		</tr>
+		<% }) %>
+	</table>
+</div>
+</div>

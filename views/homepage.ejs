@@ -1,0 +1,49 @@
+<br><br><br>
+<div class = "container" id="daftar">
+	<div class="jumbotron" id="info">
+		<h3 class="_sign">Form Pendaftaran Anggota Mikroskil Programming Club</h3>
+				<form action="/user/createPeserta" method="post" class="regsite" id="regsite">
+					<div class="control-group">
+						<input type="text" class="form-control" placeholder="Nama Anda" name="nama" id="nama" value="">
+					</div>
+          <br>
+					<div class="control-group">
+						<input type="text" class="form-control" placeholder="NIM Anda" name="nim" id="nim" value="">
+					</div>
+          <br>
+					<div class="control-group">
+						<input type="email" class="form-control" placeholder="Email yang bisa dihubungi" name="email" id="email" value="">
+					</div>
+          <br>
+					<div class="control-group">
+						<input type="text" class="form-control" placeholder="Nomor telepon yang bisa dihubungi" name="notelp" id="notelp" value="">
+					</div>
+          <br>
+          <div class="control-group">
+						<textarea class="form-control" placeholder="Alasan anda masuk ke MPC" name="alasan" style="height:200px; resize:none;"></textarea>
+					</div>
+          <br>
+          <div class="control-group">
+						<textarea class="form-control" placeholder="Apa kemampuan yang anda miliki?" name="skill" style="height:200px; resize:none;"></textarea>
+					</div>
+          <br>
+          <div class="control-group">
+						<textarea class="form-control" placeholder="Prestasi apa yang sudah pernah anda dapatkan?" name="prestasi" style="height:200px; resize:none;"></textarea>
+					</div>
+          <br>
+          <b>Apakah anda pernah mengenal TOKI ? </b>
+          <br>
+          <input type="radio" name="toki" value="yes" checked> Ya
+          <br>
+          <input type="radio" name="toki" value="no"> Tidak
+          <br><br>
+          <div class="control-group">
+						<textarea class="form-control" placeholder="Apakah anda membuat aplikasi? Jika ya, tuliskan aplikasi apa saja yang sudah pernah anda buat? Bila perlu kirimkan link portfolio anda" name="aplikasi" style="height:200px; resize:none;"></textarea>
+					</div>
+          <br><br>
+					<input type="submit" class= "btn btn-lg btn-primary btn-block" value="Daftar" id="update">
+					<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+				</form>
+				<hr>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container" style="margin-top:60px;">
+<div class = "jumbotron">
+	<h3 class="_sign">Sign Up for Free</h3>
+	<form action="/user/createAdmin" method="post" class="regsite" id="regsite">
+		<div class="control-group">
+			<input type="text" class="form-control" placeholder="your username" name="username" id="username">
+		</div>
+    <br>
+		<div class="control-group">
+			<input type="password" class="form-control" placeholder="password" name="password" id="password">
+		</div>
+    <br>
+		<div class="control-group">
+			<input type="text" class="form-control" placeholder="your name" name="name" id="name">
+		</div>
+    <br>
+		<div class="control-group">
+			<input type="text" class="form-control" placeholder="email address" name="email" id="email">
+		</div>
+    <br>
+		<input type="submit" class= "btn btn-lg btn-primary btn-block" value="Sign Up" id="update">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	</form>
+</div>
+</div>

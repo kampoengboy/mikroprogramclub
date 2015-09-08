@@ -1,0 +1,41 @@
+<div class="container" style="margin-top:50px;">
+	<h3>User Administration</h3>
+  <div class="table-responsive">
+	  <table class="table table-bordered table-hover table-striped">
+		<tr>
+			<th>Nama</th>
+			<th>NIM</th>
+			<th>Email</th>
+			<th>Telp</th>
+			<th>Alasan</th>
+			<th>Skill</th>
+			<th>Prestasi</th>
+      <th>Mengenal TOKI</th>
+      <th>Aplikasi yang pernah dibuat</th>
+		</tr>
+		<% _.each(users, function(user) { %>
+		<tr data-id="<%= user.id %>" data-model="user">
+			<td><%= user.nama %></td>
+			<td><%= user.nim %></td>
+			<td><%= user.email %></td>
+			<td><%= user.notelp %></td>
+      <td><pre><%= user.alasan %></pre></td>
+      <td><pre><%= user.skill %></pre></td>
+      <td><pre><%= user.prestasi %></pre></td>
+      <td><%= user.toki %></td>
+      <td><pre><%= user.aplikasi %></pre></td>
+			<% if (session.User.id!=user.id) { %>
+			<td><form action="/user/destroy/<%= user.id %>" method="POST">
+				<input type="hidden" name="_method" value="delete"/>
+				<input type="submit" class="btn btn-sm btn-danger" value="Delete"/>
+				<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+			</form></td>
+			<% } else  { %>
+				<td></td>
+			<% } %>
+		</tr>
+
+		<% }) %>
+	</table>
+</div>
+</div>
