@@ -99,11 +99,11 @@ module.exports = {
 				});
 			},
 			destroy : function(req,res,next){
-				// User.findOne(req.param('id'), function foundUser(err,user){
-				// 	User.destroy(user.id, function UserDeleted(err){
-				// 		if(err) return next(err);
-				// 		return res.redirect('/user');
-				// 	});
-				// });
+				User.findOne(req.param('id'), function foundUser(err,user){
+					User.destroy(user.id, function UserDeleted(err){
+						if(err) return next(err);
+						return res.redirect('/user');
+					});
+				});
 			}
 };
