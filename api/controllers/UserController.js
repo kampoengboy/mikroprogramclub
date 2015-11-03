@@ -6,7 +6,7 @@
  */
 var bcrypt = require('bcrypt');
 module.exports = {
-			createPeserta : function(req,res,next){
+			/*createPeserta : function(req,res,next){
 					User.findOne({'nim':req.param('nim')}, function(err,user1){
 							if(err) return next(err);
 							if(user1) return res.send("Maaf, NIM ini sudah pernah mendaftar");
@@ -30,7 +30,7 @@ module.exports = {
 									});
 							});
 					});
-			},
+			},*/
 			list : function(req,res,next){
 				User.find({'admin':false}, function foundUser(err,users){
 					if(err) return next(err);
